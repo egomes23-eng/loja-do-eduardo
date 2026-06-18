@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketingX | Loja de Serviços Digitais</title>
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- CABEÇALHO (HEADER) --- */
+        header {
+            background-color: #1a1a2e;
+            color: #fff;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header .logo h1 {
+            font-size: 1.8rem;
+            color: #e94560;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #e94560;
+        }
+
+        /* --- BANNER PRINCIPAL (HERO) --- */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #adb5bd;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- VITRINE DE PRODUTOS --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: #e94560;
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        /* --- CARD DE SERVIÇO --- */
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .product-info {
+            padding: 2rem;
+        }
+
+        .product-badge {
+            background-color: #e94560;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .product-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #16213e;
+        }
+
+        .product-card p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features li {
+            font-size: 0.9rem;
+            color: #4a4a4a;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-features li::before {
+            content: '✓';
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #1a1a2e;
+            margin-top: auto;
+        }
+
+        .product-price span {
+            font-size: 1rem;
+            color: #888;
+            font-weight: normal;
+        }
+
+        .buy-btn {
+            display: block;
+            background-color: #e94560;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .buy-btn:hover {
+            background-color: #950740;
+        }
+
+        /* --- RODAPÉ (FOOTER) --- */
+        footer {
+            background-color: #1a1a2e;
+            color: #adb5bd;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Marketing<span>X</span></h1>
+        </div>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Pacotes</a>
+            <a href="#">Suporte</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Selecione o motor do seu crescimento</h2>
+        <p>Serviços de marketing digital direto ao ponto, com preços fechados e sem burocracia.</p>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title">Nossos Pacotes de Marketing</h2>
+        
+        <div class="products-grid">
+            
+            <div class="product-card">
+                <div class="product-info">
+                    <span class="product-badge">Social Media</span>
+                    <h3>Combo Redes Sociais</h3>
+                    <p>Ideal para empresas que precisam manter o Instagram ativo, profissional e atraente.</p>
+                    <ul class="product-features">
+                        <li>12 Postagens por mês</li>
+                        <li>Legendas e hashtags otimizadas</li>
+                        <li>Design profissional (Canva/Photoshop)</li>
+                        <li>Agendamento incluso</li>
+                    </ul>
+                    <div class="product-price">R$ 590 <span>/mês</span></div>
+                </div>
+                <button class="buy-btn">Contratar Pacote</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-info">
+                    <span class="product-badge">Tráfego Pago</span>
+                    <h3>Anúncios Express</h3>
+                    <p>Apareça para os clientes certos no Google e Meta (Instagram/Facebook) e aumente suas vendas.</p>
+                    <ul class="product-features">
+                        <li>Criação de Campanhas</li>
+                        <li>Instalação de Pixel/Tags</li>
+                        <li>Otimização semanal</li>
+                        <li>Relatório mensal de resultados</li>
+                    </ul>
+                    <div class="product-price">R$ 890 <span>/mês</span></div>
+                </div>
+                <button class="buy-btn">Contratar Pacote</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-info">
+                    <span class="product-badge">Design</span>
+                    <h3>Identidade Visual</h3>
+                    <p>Tudo o que sua marca precisa para transmitir confiança e autoridade no mercado.</p>
+                    <ul class="product-features">
+                        <li>Logotipo Principal e Secundário</li>
+                        <li>Paleta de Cores e Tipografia</li>
+                        <li>Manual de uso da marca</li>
+                        <li>3 Artes de capa de brinde</li>
+                    </ul>
+                    <div class="product-price">R$ 750 <span>Taxa única</span></div>
+                </div>
+                <button class="buy-btn">Contratar Pacote</button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MarketingX - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
